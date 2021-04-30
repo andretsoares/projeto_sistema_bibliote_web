@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1, mozilla">
+
+
+
+<meta name="viewport" content="html/css" charset="UTF-8"> 
+
+
+<!--<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- <script type="text/javascript" src="js/mudar_botoes.js"></script> -->
+
+
+<link rel='stylesheet' type="text/css" href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+
+<style>
+
+
+/* estilo dos botoes */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #212121;
+  cursor: pointer;
+  font-size: 18px;
+  color:white;
+  position:relative;
+  left:-50px;
+  
+}
+
+/* estilo da ativacao da classe, e botoes no mouse-over */
+.active, .btn:hover{
+  background-color: #666;
+  color: #212121;
+}
+
+
+
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+
+}
+
+.main-menu>ul {
+margin:7px 0;
+
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+  display:none;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+
+
+.mystyle {
+  
+  color: white;
+  
+}
+
+.text-i{
+
+	font-size:9px;
+	position:relative;
+	left:auto;
+	font-weight:bold;
+}
+
+input{
+	
+	position:absolute;
+	left:75px;
+	top:-20px;
+	width:160px;
+
+}
+
+
+
+</style>
+
+<style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+
+
+</head>
+<body>
+
+
+<div id="myDIV">
+
+				<nav class="main-menu">
+ 
+					<ul>
+						<ol class="has-subnav">	
+							<i class="btn fa fa-home fa-2x" id="1" onclick="myFunction1()"><br><p class="text-i"><input type="text" id="input1" class="input"/>Home</p></i>
+						</ol>
+						<ol>
+							<i class="btn fa fa-search fa-2x" id="2" onclick="myFunction2()"><br><p class="text-i"><input type="text" class="input" />Pesquisa</p></i>
+						</ol>	
+						<ol>
+							<i class="btn fa fa-book fa-2x" id="3" onclick="myFunction3()"><br><p class="text-i"><input type="text" class="input" />Acervo</p></i>
+					    </ol>
+						<ol>	
+							<i class="btn fa fa-barcode fa-2x" id="4" onclick="myFunction4()"><br><p class="text-i"><input type="text" class="input" />ISBN</p></i>
+						</ol>
+						<ol>
+							<i class="btn fa fa-user fa-2x" id="5"onclick="myFunction5()"><br><p class="text-i"><input type="text" class="input" />Usuário</p></i>
+					    </ol>
+						<ol>
+					  
+							<i class="btn fa fa-user-plus fa-2x" id="6" onclick="myFunction6()"><br><p class="text-i"><input type="text" class="input" />Adicionar</p></i>
+					    </ol>
+						<ol>
+							<i class="btn fa fa-user-times fa-2x" id="7" onclick="myFunction7()"><br><p class="text-i"><input type="text" class="input" />Excluir</p></i>	  
+						</ol>
+						<ol>
+							<i class="btn fa fa-users fa-2x" id="8"  onclick="myFunction8()"><br><p class="text-i"><input type="text" class="input" />Grupos</p></i>	
+						</ol>
+						<ol>	
+						<i class="btn fa fa-power-off fa-2x" id="9" onclick="myFunction9()"><br><p class="text-i"><input type="text" class="input" />Sair</p></i>
+					    </ol>
+						</ul>
+  
+				</nav>
+</div>
+
+<script>
+// Ativa Botoes ao ser precionado
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace("active", "");
+  }
+  this.className += " active";
+  });
+}
+
+
+</script>
+
+<script>
+
+function myFunction1() {
+   var element = document.getElementById("1");
+   element.classList.toggle("mystyle");
+     
+   
+}
+
+</script>
+
+<script>
+
+function myFunction2() {
+   var element = document.getElementById("2");
+   element.classList.toggle("mystyle");
+     
+   
+}
+
+</script>
+
+
+<script>
+function myFunction3() {
+   var element = document.getElementById("3");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction4() {
+   var element = document.getElementById("4");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction5() {
+   var element = document.getElementById("5");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction6() {
+   var element = document.getElementById("6");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+
+
+<style>
+
+
+<!---------------------------------------------------------------------Ativar e Esconder Barra Lateral Esquerda-------------->
+
+
+.collapsed {
+    display: none; /* hide it for small displays */
+}
+@media (min-width: 50px) {
+    .collapsed {
+        display: block;
+        margin-left: -15%; /* same width as sidebar */
+    }
+}
+
+#row-main {
+    overflow-x: hidden; /* necessary to hide collapsed sidebar */
+}
+
+#content {
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+	
+}
+#sidebar {
+    -webkit-transition: margin 0.3s ease;
+    -moz-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+	
+}
+
+
+<!---------------------------------------------------------------------Fim da Barra Lateral Esquerda------------------------->
+
+
+
+<!---------------------------------------------------------------------Inicio configurações do Body-------------------------->
+
+
+
+section {
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    background:#354545;
+	
+
+}
+
+.main_sidebar {
+    min-height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    width:200px;
+    transition: all 300ms cubic-bezier(0.65, 0.05, 0.36, 1);
+    will-change: left, width;
+    box-shadow: inset -1px 0 10px rgba(0, 0, 0, 0.4);
+    background: #293749;
+}
+.main_sidebar:after {
+    content: '';
+    background-color: #253238;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 58px;
+}
+.main_sidebar ul {
+    list-style:none;
+    padding-left:58px;
+}
+.main_sidebar ul li {
+    padding:10px;
+}
+.main_sidebar ul li a {
+    color:#fff;
+    display:block;
+}
+.main_sidebar ul li i {
+    float:left;
+    color:grey;
+    margin-left:-58px;
+    font-size:24px;
+    padding-left:7px;
+}
+.main_sidebar ul li:hover {
+    background:#167696;
+}
+.main_sidebar ul li a:hover {
+    color:#fff;
+    text-decoration:none;
+}
+.main_sidebar ul li:hover i {
+    color:#fff;
+}
+.main_sidebar ul li.active {
+    background:#0f4698;
+}
+.main_sidebar ul li.active i {
+    color:#fff;
+}
+.main_sidebar ul li.active:hover {
+    background:#167696;
+}
+.main_sidebar ul li.active:hover i {
+    color:#fff;
+}
+
+.main {
+    float:right;
+    color:#fff;
+    display:block;
+    width:100%;
+    background:f1f1f1;
+    min-height:100vh;
+}
+
+.a {
+
+	color:white; 
+
+
+}
+.a:hover {
+  color: blue;
+}
+
+body {
+
+background:#293749;
+
+
+}
+
+.fa-2x{
+
+	font-size:24px;
+
+}
+
+</style>
+
+
+<!---------------------------------------------------------------------Fim das configurações do body------------------------->
+
+<!---------------------------------------------------------------------Script Ativar e desativar Barra Lateral--------------->
+
+<script>
+
+
+function toggleSidebar(side) {
+    if (side !== "left" && side !== "right") {
+        return false;
+    }
+    var left = $("#sidebar-left"),
+        right = $("#sidebar-right"),
+        content = $("#content"),
+        openSidebarsCount = 0,
+        contentClass = "";
+    
+    // toggle sidebar
+    if (side === "left") {
+        left.toggleClass("collapsed");
+    } else if (side === "right") {
+        right.toggleClass("collapsed");
+    }
+    
+    // determine number of open sidebars
+    if (!left.hasClass("collapsed")) {
+        openSidebarsCount += 1;
+    }
+    
+    if (!right.hasClass("collapsed")) {
+        openSidebarsCount += 1;
+    }
+    
+    // determine appropriate content class
+    if (openSidebarsCount === 0) {
+        contentClass = "col-md-12";
+    } else if (openSidebarsCount === 1) {
+        contentClass = "col-md-9";
+    } else {
+        contentClass = "col-md-6";
+    }
+    
+    // apply class to content
+    content.removeClass("col-md-12 col-md-9 col-md-6")
+        .addClass(contentClass);
+}
+
+
+
+
+
+</script>
+
+<!---------------------------------------------------------------------Fim dos Script---------------------------------------->
+
+<script>
+
+function direita(){
+
+	toggleSidebar("right");
+	return false;
+
+
+}
+
+function esquerda(){
+
+	toggleSidebar("left");
+	return false;
+
+
+}
+
+
+</script>        
+		
+		
+</head>
+
+
+<body>
+
+<!-- style="background:#293749;" -->
+
+
+<section>
+
+<div class="container">
+		
+	<div class="row" id="row-main" >
+	
+		<div class="col-md-3 sidebar main_sidebar" id="sidebar-left" >
+            
+				<a href="Javascript: void(0)"  id="fonte1" style="cursor: pointer; text-decoration:none; position:absolute; top: 6px; left:180px;" class="toggle-sidebar-left fa fa-angle-double-left fa-2x a" onclick="esquerda(), document.getElementById('fonte2').style.color='white';"></a>
+			
+			<div class="col-md-3 sidebar" id="sidebar-right">
+		
+				<a href="Javascript: void(0)"  id="fonte2" style="color: #293749; text-decoration:none; cursor: pointer; position:relative; top: 6px; left:202px;" class="toggle-sidebar-right fa fa-angle-double-right fa-2x a" onclick="esquerda(), document.getElementById('fonte2').style.color='#293749';"></a>
+        
+			
+			
+					
+					<ul>
+				   
+					
+					<li><i class="fa fa-home active"></i><a href="#">Início</a></li></span>
+					<li><i class="fa fa-search"></i><a href="#">Pesquisa</a></li>
+					<li><i class="fa fa fa-book"></i><a href="#">Acervo</a></li>
+					<li><i class="fas fa-book-reader" style="font-size:24px; position:relative; left:0px;"></i><a href="#">Empréstimos</a></li>
+					<li><i class="fa fa fa-barcode"></i><a href="#">ISBN</a></li>
+					<li><i class="fa fa fa-user"></i><a href="#">Usuário</a></li>
+					<li><i class="fa fa-black-tie"></i><a href="#">Funcionário</a></li>
+					<li><i class="fa fa-bar-chart"></i><a href="#">Relatórios</a></li>
+					<li><i class="fa fa-lock"></i><a href="#">Senha</a></li>
+					<li><i class="fa fa fa-user-plus"></i><a href="#">Adicionar</a></li>
+					<li><i class="fa fa fa-user-times"></i><a href="#">Excluir</a></li>
+					<li><i class="fa fa fa-users"></i><a href="#">Grupos</a></li>
+					<li><i class="fa fa fa-power-off"></i><a href="#">Sair</a></li>
+					
+					</ul>
+		
+				</div>
+		
+        </div>
+		
+		
+		
+    </div>
+			
+				
+			
+</section>
+
+<article>
+
+
+
+
+
+</article>
+<aside></aside>			
+
+
+				
+
+
+
+
+
+</body>
+</html>

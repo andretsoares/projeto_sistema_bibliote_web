@@ -1,0 +1,503 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/mudar_botoes.js"></script>
+
+
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+
+
+<script>
+
+
+var header = document.getElementById("has-subnav");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" active", "");
+  }
+  this.className += " active";
+  });
+}
+
+
+
+</script>
+
+
+
+<style>
+
+
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+  display:none;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+
+
+.mystyle {
+  
+  color: white;
+  
+}
+
+.text-i{
+
+	font-size:10px;
+	position:relative;
+	left:auto;
+	font-weight:bold;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #9a9a9awhite;
+  cursor: pointer;
+  font-size:18px;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active, .btn:hover {
+  background-color: #9a9a9a;
+  color: white;
+}
+
+</style>
+
+
+
+
+
+<script>
+
+function myFunction1() {
+   var element = document.getElementById("1");
+   element.classList.toggle("mystyle");
+     
+   
+}
+
+</script>
+
+<script>
+
+function myFunction2() {
+   var element = document.getElementById("2");
+   element.classList.toggle("mystyle");
+     
+   
+}
+
+</script>
+
+
+<script>
+function myFunction3() {
+   var element = document.getElementById("3");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction4() {
+   var element = document.getElementById("4");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction5() {
+   var element = document.getElementById("5");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction6() {
+   var element = document.getElementById("6");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction7() {
+   var element = document.getElementById("7");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction8() {
+   var element = document.getElementById("8");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction9() {
+   var element = document.getElementById("9");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction10() {
+   var element = document.getElementById("10");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction11() {
+   var element = document.getElementById("11");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction12() {
+   var element = document.getElementById("12");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction13() {
+   var element = document.getElementById("13");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+<script>
+function myFunction14() {
+   var element = document.getElementById("14");
+   element.classList.toggle("mystyle");
+}
+
+</script>
+
+
+
+
+
+
+</head>
+<body>
+
+<h1></h1>
+<p></p>
+  
+<div id="myDIV">
+
+<nav id="nav-menu" class="main-menu">
+
+
+  <ul>
+                <li id="has-subnav" class="has-subnav">
+                    <a href="#">
+                        <i id="1" class="btn fa fa-home fa-2x" onclick="myFunction1()"><br><p class="text-i">Home</p><br></i>
+                        
+						<span class="nav-text">
+                         
+						
+						 
+                        </span>
+						
+						
+                    </a>
+					
+					
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                        <i id="2" class="btn fa fa-search fa-2x" onclick="myFunction2()"><br><p class="text-i">Pesquisar</p><br></i>
+						
+                        <span class="nav-text">
+							
+							
+						
+						</span>
+                    </a>
+                    
+                </li>
+                
+                <li class="has-subnav">
+                    <a href="#">
+                       <i id="4" class="btn fa fa-book fa-2x" onclick="myFunction4()"><br><p class="text-i">Acervo</p><br></i>
+
+                        <span class="nav-text">
+                            
+							
+							
+                        </span>
+                    </a>
+                   
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                        <i id="5" class="btn fa fa-barcode fa-2x" onclick="myFunction5()"><br><p class="text-i">ISBN</p><br></i>
+
+                        <span class="nav-text">
+                            
+							
+							
+                        </span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <i id="6" class="fas fa-book-reader" style="font-size:24px; position:relative; left:15px; height:36px; width:60px;" onclick="myFunction6()"><br><p class="text-i">Status</p></i>
+                        <span class="nav-text">
+                           
+						  
+						   
+                        </span>
+                    </a>
+                </li>
+				
+				<li>
+                   <a href="#">
+                       <i id="7" class="fas fa-save" style="font-size:24px; position:relative; left:15px; height:36px; width:60px;" onclick="myFunction7()"><br><p class="text-i">Salvar</p></i>
+                        <span class="nav-text">
+                            
+							
+							
+                        </span>
+                    </a>
+                </li>
+				
+                <li>
+                   <a href="#">
+                       <i id="8" class="fa fa-black-tie" style="font-size:24px" onclick="myFunction8()"><br><p class="text-i">Funcionário</p></i>
+                        <span class="nav-text">
+                            
+						
+							
+                        </span>
+                    </a>
+                </li> 
+                 <li>
+                   <a href="#">
+                       <i id="9" class="fa fa-bar-chart" style="font-size:24px" onclick="myFunction9()"><br><p class="text-i">Relatórios</p><br></i>	
+                        <span class="nav-text">
+                            
+						
+							
+                        </span>
+                    </a>
+                </li> -->
+				<li class="has-subnav">
+                    <a href="#">
+                       <i id="3" class="btn fa fa-user fa-2x" onclick="myFunction3()"><br><p class="text-i">Usuário</p><br></i>
+						
+                        <span class="nav-text">
+                            
+							
+							
+						</span>
+                    </a>
+                    
+                </li>
+				
+				<li class="has-subnav">
+                   <a href="#">
+                       <i id="11" class="btn fa fa-user-plus" style="font-size:24px" onclick="myFunction11()"><br><p class="text-i">Adicionar</p><br></i>	
+                        <span class="nav-text">
+                            
+						
+							
+                        </span>
+                    </a>
+                </li>
+				
+				<li class="has-subnav">
+                   <a href="#">
+                       <i id="12" class="btn fa fa-user-times" style="font-size:24px" onclick="myFunction12()"><br><p class="text-i">Excluir User</p><br></i>	
+                        <span class="nav-text">
+                            
+						
+							
+                        </span>
+                    </a>
+                </li>
+				
+				<li class="has-subnav">
+                   <a href="#">
+                       <i id="10" class="btn fa fa-users" style="font-size:24px" onclick="myFunction10()"><br><p class="text-i">Grupos</p><br></i>	
+                        <span class="nav-text">
+                            
+						
+							
+                        </span>
+                    </a>
+                </li>
+				
+							
+				<!-- <li>
+                   <a href="#">
+                       <i id="13" class="fa fa-lock" style="font-size:24px" onclick="myFunction13()"><br><p class="text-i">Alterar Senha</p><br></i>	
+                        <span class="nav-text">
+                            
+						
+							
+                        </span>
+                    </a>
+                </li> -->
+
+            <ul class="logout">
+                <li class="has-subnav">
+                   <a href="#">
+                         <i id="14" class="btn fa fa-power-off fa-2x" onclick="myFunction14()"><br><p class="text-i">Sair</p><br></i>
+                        <span class="nav-text">
+                           
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+</nav>
+
+
+
+  
+</div>
+
+
+
+</body>
+</html>
